@@ -28,7 +28,7 @@ RSpec.describe FortniteOpponentsStats::Services::FortniteAPI do
               )
 
             expect(subject.parsed_response).to eq(
-              YAML.load_file('spec/support/responses/fortnite_api/lookup/valid_and_exists.yml')
+              YAML.load_file('spec/support/services/fortnite_api/lookup/valid_and_exists.yml')
             )
           end
         end
@@ -47,7 +47,7 @@ RSpec.describe FortniteOpponentsStats::Services::FortniteAPI do
 
             expect(subject.parsed_response).to eq(
               YAML.load_file(
-                'spec/support/responses/fortnite_api/lookup/valid_and_do_not_exist.yml'
+                'spec/support/services/fortnite_api/lookup/valid_and_do_not_exist.yml'
               )
             )
           end
@@ -98,7 +98,7 @@ RSpec.describe FortniteOpponentsStats::Services::FortniteAPI do
               )
 
             expect(subject.parsed_response).to eq(
-              YAML.load_file('spec/support/responses/fortnite_api/stats/valid_and_exists.yml')
+              YAML.load_file('spec/support/services/fortnite_api/stats/valid_and_exists.yml')
             )
           end
         end
@@ -117,7 +117,7 @@ RSpec.describe FortniteOpponentsStats::Services::FortniteAPI do
 
             expect(subject.parsed_response).to eq(
               YAML.load_file(
-                'spec/support/responses/fortnite_api/stats/valid_and_do_not_exist.yml'
+                'spec/support/services/fortnite_api/stats/valid_and_do_not_exist.yml'
               )
             )
           end
