@@ -1,0 +1,21 @@
+AllCops:
+  NewCops: enable
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 99
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
