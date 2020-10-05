@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'webmock/rspec'
 require 'fortnite_opponents_stats'
 
 RSpec.configure do |config|

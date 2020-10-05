@@ -6,19 +6,21 @@ module FortniteOpponentsStats
       class DailyRequestLimitExceededError < StandardError; end
       class APIKeyNotValidError < StandardError; end
 
-      BASE_URI    = -'https://fortniteapi.io/v1/'
-      ACCOUNT_URI = -"#{BASE_URI}/lookup"
-      STATS_URI   = -"#{BASE_URI}/stats"
+      BASE_URI   = -'https://fortniteapi.io/v1'
+      LOOKUP_URI = -"#{BASE_URI}/lookup"
+      STATS_URI  = -"#{BASE_URI}/stats"
 
       def initialize(api_key)
         @api_key = api_key
       end
 
-      def account_id_by_username(username)
-        request(:get, ACCOUNT_URI, { username: username })
+      # Search an account ID using a player name
+      def lookup(username, platform = 'epic')
+        request(:get, LOOKUP_URI, { username: username, platform: platform })
       end
 
-      def stats_by_account_id(account_id)
+      # Get player stats, with a breakdown per platform used (mouse & keyboard, gamepad, touch)
+      def stats(account_id)
         request(:get, STATS_URI, { account: account_id })
       end
 

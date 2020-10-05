@@ -1,0 +1,186 @@
+{
+  "result": true,
+  "source": "cache",
+  "mode": "all",
+  "name": "Ninja",
+  "account": {
+      "level": 87,
+      "progress_pct": 99
+  },
+  "global_stats": {
+      "duo": {
+          "placetop1": 2692,
+          "kd": 9.06,
+          "winrate": 0.3639,
+          "placetop3": 0,
+          "placetop5": 3483,
+          "placetop6": 0,
+          "placetop10": 0,
+          "placetop12": 4302,
+          "placetop25": 0,
+          "kills": 42616,
+          "matchesplayed": 7397,
+          "minutesplayed": 38454,
+          "score": 1266954,
+          "playersoutlived": 203785
+      },
+      "solo": {
+          "placetop1": 2278,
+          "kd": 9.52,
+          "winrate": 0.3064,
+          "placetop3": 0,
+          "placetop5": 0,
+          "placetop6": 0,
+          "placetop10": 3219,
+          "placetop12": 0,
+          "placetop25": 4054,
+          "kills": 49091,
+          "matchesplayed": 7434,
+          "minutesplayed": 20020,
+          "score": 696753,
+          "playersoutlived": 126425
+      },
+      "squad": {
+          "placetop1": 2817,
+          "kd": 9.75,
+          "winrate": 0.3766,
+          "placetop3": 3320,
+          "placetop5": 0,
+          "placetop6": 3914,
+          "placetop10": 0,
+          "placetop12": 0,
+          "placetop25": 0,
+          "kills": 45443,
+          "matchesplayed": 7480,
+          "minutesplayed": 35961,
+          "score": 1353135,
+          "playersoutlived": 201128
+      }
+  },
+  "per_input": {
+      "keyboardmouse": {
+          "duo": {
+              "placetop1": 2688,
+              "placetop3": 0,
+              "placetop5": 3477,
+              "placetop6": 0,
+              "placetop10": 0,
+              "placetop12": 4291,
+              "placetop25": 0,
+              "kills": 42525,
+              "matchesplayed": 7381,
+              "minutesplayed": 38275,
+              "score": 1260637,
+              "playersoutlived": 202700,
+              "kd": 9.06,
+              "winrate": 0.3642
+          },
+          "solo": {
+              "placetop1": 2277,
+              "placetop3": 0,
+              "placetop5": 0,
+              "placetop6": 0,
+              "placetop10": 3217,
+              "placetop12": 0,
+              "placetop25": 4047,
+              "kills": 49040,
+              "matchesplayed": 7394,
+              "minutesplayed": 19913,
+              "score": 693311,
+              "playersoutlived": 125395,
+              "kd": 9.58,
+              "winrate": 0.308
+          },
+          "squad": {
+              "placetop1": 2815,
+              "placetop3": 3318,
+              "placetop5": 0,
+              "placetop6": 3912,
+              "placetop10": 0,
+              "placetop12": 0,
+              "placetop25": 0,
+              "kills": 45412,
+              "matchesplayed": 7476,
+              "minutesplayed": 35917,
+              "score": 1351421,
+              "playersoutlived": 200856,
+              "kd": 9.74,
+              "winrate": 0.3765
+          }
+      },
+      "gamepad": {
+          "duo": {
+              "placetop1": 4,
+              "placetop3": 0,
+              "placetop5": 6,
+              "placetop6": 0,
+              "placetop10": 0,
+              "placetop12": 11,
+              "placetop25": 0,
+              "kills": 91,
+              "matchesplayed": 16,
+              "minutesplayed": 179,
+              "score": 6317,
+              "playersoutlived": 1085,
+              "kd": 7.58,
+              "winrate": 0.25
+          },
+          "squad": {
+              "placetop1": 2,
+              "placetop3": 2,
+              "placetop5": 0,
+              "placetop6": 2,
+              "placetop10": 0,
+              "placetop12": 0,
+              "placetop25": 0,
+              "kills": 31,
+              "matchesplayed": 4,
+              "minutesplayed": 44,
+              "score": 1714,
+              "playersoutlived": 272,
+              "kd": 15.5,
+              "winrate": 0.5
+          },
+          "solo": {
+              "placetop1": 1,
+              "placetop3": 0,
+              "placetop5": 0,
+              "placetop6": 0,
+              "placetop10": 2,
+              "placetop12": 0,
+              "placetop25": 4,
+              "kills": 47,
+              "matchesplayed": 21,
+              "minutesplayed": 93,
+              "score": 3226,
+              "playersoutlived": 876,
+              "kd": 2.35,
+              "winrate": 0.0476
+          }
+      },
+      "touch": {
+          "solo": {
+              "placetop1": 0,
+              "placetop3": 0,
+              "placetop5": 0,
+              "placetop6": 0,
+              "placetop10": 0,
+              "placetop12": 0,
+              "placetop25": 3,
+              "kills": 4,
+              "matchesplayed": 19,
+              "minutesplayed": 14,
+              "score": 216,
+              "playersoutlived": 154,
+              "kd": 0.21,
+              "winrate": 0
+          }
+      }
+  },
+  "seasons_available": [
+      12,
+      13,
+      14
+  ],
+  "season": "all"
+}

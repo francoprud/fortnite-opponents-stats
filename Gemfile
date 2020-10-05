@@ -10,3 +10,7 @@ group :development, :test do
   gem 'rspec', '~> 3.0'
   gem 'rubocop', '~> 0.92.0', require: false
 end
+
+group :test do
+  gem 'webmock', '~> 2.1'
+end
