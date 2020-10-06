@@ -3,28 +3,31 @@ require 'rtesseract'
 
 module FortniteOpponentsStats
   class ImageReader
-    def self.read(img_path)
-      grayscale_conversion(img_path)
-      negate_conversion(img_path)
-      read_image(img_path)
+    # Second argument is passed just for test purposes
+    def self.read(image_path, output_path = nil)
+      grayscale_conversion(image_path, output_path)
+      negate_conversion(image_path, output_path)
+      read_image(image_path, output_path)
     end
 
     private
 
-    def grayscale_conversion(img_path)
-      MiniMagick::Image.new(img_path) { |image| image.colorspace('Gray') }
+    def grayscale_conversion(image_path, output_path = nil)
+      image = MiniMagick::Image.open(image_path)
+      image.colorspace('Gray')
+      image.write(output_path || image_path)
     end
 
-    def negate_conversion(img_path)
+    def negate_conversion(image_path, output_path = nil)
       MiniMagick::Tool::Magick.new do |magick|
-        magick << img_path
+        magick << (output_path || image_path)
         magick.negate
-        magick << img_path
+        magick << (output_path || image_path)
       end
     end
 
-    def read_image(img_path)
-      RTesseract.new(img_path).to_s
+    def read_image(image_path, output_path = nil)
+      RTesseract.new(output_path || image_path).to_s
     end
   end
 end
