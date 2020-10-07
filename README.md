@@ -24,6 +24,16 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Image Reader Specs
+
+Image read is done with Tesseract OCR with a previous processing of the image with Minimagick. When 
+doing test over the image reader flow, you can use the tag `files` to run only the ones involved 
+with this flow. 
+
+```ruby
+bundle expec rspec --tag files
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
