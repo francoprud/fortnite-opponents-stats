@@ -5,6 +5,8 @@ gemspec
 
 gem 'httparty', '~> 0.13.7'
 gem 'rake', '~> 12.0'
+gem 'mini_magick', '~> 4.10.1'
+gem 'rtesseract', '~> 3.1.2'
 
 group :development, :test do
   gem 'rspec', '~> 3.0'
