@@ -1,11 +1,11 @@
 module FortniteOpponentsStats
   class Main
     class << self
-      def execute(forniteio_api_key)
-        while true
+      def execute(_forniteio_api_key)
+        loop do
           screenshot = nil # take screenshot
           feed = FortniteOpponentsStats::ImageReader.read(screenshot)
-          usernames = FortniteOpponentsStats::KillFeedParser.parse(feed)
+          _usernames = FortniteOpponentsStats::KillFeedParser.parse(feed)
           # search usernames from API
           # store usernames
           # print usernames on terminal
