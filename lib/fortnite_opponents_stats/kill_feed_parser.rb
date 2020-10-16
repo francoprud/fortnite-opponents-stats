@@ -8,7 +8,7 @@ module FortniteOpponentsStats
 
     class << self
       def parse(feed)
-        usernames = [[], []] # usernames[0] for left usernames, usernames[1] for right usernames 
+        usernames = [[], []] # usernames[0] for left usernames, usernames[1] for right usernames
         lines = feed.split("\n") # Split by lines
         lines.each do |line|
           left, right = split_by_left_and_right(line)
