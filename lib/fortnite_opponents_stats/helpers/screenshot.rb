@@ -1,4 +1,4 @@
-require 'osx/cocoa'
+# Read the following https://www.rubydoc.info/gems/win32screenshot/1.0.6/Win32/Screenshot/Take
 
 module FortniteOpponentsStats
   module Helpers
