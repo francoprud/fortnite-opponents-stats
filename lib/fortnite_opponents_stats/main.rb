@@ -13,7 +13,6 @@ module FortniteOpponentsStats
         usernames = FortniteOpponentsStats::KillFeedParser.parse(feed) # Parse usernames
         store_user_stats(usernames) # Retrieve stats from users
         @terminal.print(@users_with_stats) # Print usernames on terminal
-        sleep 5
       end
     end
 

@@ -16,6 +16,9 @@ Style/FrozenStringLiteralComment:
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 
+Naming/MethodParameterName:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
