@@ -14,7 +14,7 @@ module FortniteOpponentsStats
         @api_key = api_key
       end
 
-      # Search an account ID using a player name
+      # Search an account ID using a player name. platform = epic, psn, xbl
       def lookup(username, platform = 'epic')
         request(:get, LOOKUP_URI, { username: username, platform: platform })
       end

@@ -12,3 +12,9 @@
 .rspec_status
 
 .DS_Store
+
+# byebug
+.byebug_history
+
+# Gem builds
+*.gem

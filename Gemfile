@@ -9,6 +9,7 @@ gem 'mini_magick', '~> 4.10.1'
 gem 'rtesseract', '~> 3.1.2'
 
 group :development, :test do
+  gem 'byebug', '~> 11.1.3'
   gem 'rspec', '~> 3.0'
   gem 'rubocop', '~> 0.92.0', require: false
 end
