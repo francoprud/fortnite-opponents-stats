@@ -1,10 +1,9 @@
-require 'byebug'
-
 module FortniteOpponentsStats
   class Main
     def initialize(forniteio_api_key)
       @forniteio_api = FortniteOpponentsStats::Services::FortniteAPI.new(forniteio_api_key)
       @users_with_stats = [[], []]
+      @terminal = FortniteOpponentsStats::Helpers::Terminal.new
     end
 
     def execute
@@ -13,7 +12,7 @@ module FortniteOpponentsStats
         feed = FortniteOpponentsStats::ImageReader.read(screenshot) # Read screenshot
         usernames = FortniteOpponentsStats::KillFeedParser.parse(feed) # Parse usernames
         store_user_stats(usernames) # Retrieve stats from users
-        # print usernames on terminal
+        @terminal.print(@users_with_stats) # Print usernames on terminal
         sleep 5
       end
     end
@@ -24,7 +23,8 @@ module FortniteOpponentsStats
       (0..1).each do |user_group|
         usernames[user_group].each do |username|
           user_with_stats = retrieve_stats(username)
-          if user_with_stats && user_with_stats['result']
+          if user_with_stats && user_with_stats['result'] &&
+             @users_with_stats[user_group].none? { |arr| arr['name'] == user_with_stats['name'] }
             @users_with_stats[user_group] << user_with_stats
           end
         end
