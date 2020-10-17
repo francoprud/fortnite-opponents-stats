@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require 'fortnite_opponents_stats'
+
+begin
+  if ARGV[0]
+    puts 'Started Fortnite Opponents Stats!'
+    FortniteOpponentsStats::Main.new(ARGV[0]).execute
+  else
+    puts 'No Fortnite.io API key provided.'
+    puts 'Exit.'
+  end
+rescue Interrupt
+  puts "\nctrl-c detected. Execution interrputed."
+end
