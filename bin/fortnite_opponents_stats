@@ -5,7 +5,15 @@ require 'fortnite_opponents_stats'
 begin
   if ARGV[0]
     puts 'Started Fortnite Opponents Stats!'
-    FortniteOpponentsStats::Main.new(ARGV[0]).execute
+    options = {
+      monitor_number: ARGV[1],
+      px_top: ARGV[2],
+      px_left: ARGV[3],
+      px_width: ARGV[4],
+      px_height: ARGV[5],
+      output: ARGV[6]
+    }
+    FortniteOpponentsStats::Main.new(ARGV[0], options).execute
   else
     puts 'No Fortnite.io API key provided.'
     puts 'Exit.'

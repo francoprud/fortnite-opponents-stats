@@ -1,19 +1,20 @@
 module FortniteOpponentsStats
   class Main
-    def initialize(forniteio_api_key)
+    def initialize(forniteio_api_key, **options)
       @forniteio_api = FortniteOpponentsStats::Services::FortniteAPI.new(forniteio_api_key)
+      @screenshot = FortniteOpponentsStats::Helpers::Screenshot.new(options)
       @users_with_stats = [[], []]
       @terminal = FortniteOpponentsStats::Helpers::Terminal.new
     end
 
     def execute
       loop do
-        screenshot = nil # Take screenshot
-        feed = FortniteOpponentsStats::ImageReader.read(screenshot) # Read screenshot
+        screenshot_path = @screenshot.capture # Take screenshot
+        feed = FortniteOpponentsStats::ImageReader.read(screenshot_path) # Read screenshot
         usernames = FortniteOpponentsStats::KillFeedParser.parse(feed) # Parse usernames
         store_user_stats(usernames) # Retrieve stats from users
         @terminal.print(@users_with_stats) # Print usernames on terminal
-        sleep 5
+        @screenshot.delete(screenshot_path) # Delete generated screenshot
       end
     end
 
@@ -39,6 +40,7 @@ module FortniteOpponentsStats
     def retrieve_account_id(username)
       %w[epic psn xbl].each do |platform|
         response = @forniteio_api.lookup(username, platform).parsed_response
+        next if response.nil?
         return response['account_id'] if response['result']
       end
       nil
