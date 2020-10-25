@@ -4,7 +4,7 @@ module FortniteOpponentsStats
     POSSIBLE_ACTIONS = ['shotgunned', 'eliminated', 'finally eliminated', 'sniped', 'NO-SCOPED',
                         'bludgeoned', 'dealt it and', 'Infinity Blade erased', 'shivered', 'burst',
                         'flushed', 'dropped anchor on', 'sent', 'arrested', 'ZAPPED', 'CANcelled',
-                        'smote', 'skewered', 'flattened', "'sploded"].freeze
+                        'smote', 'skewered', 'flattened', "'sploded", 'knocked out'].freeze
 
     class << self
       def parse(feed)
