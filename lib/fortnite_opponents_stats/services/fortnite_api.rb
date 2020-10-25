@@ -31,6 +31,11 @@ module FortniteOpponentsStats
                                               headers: { 'Authorization' => @api_key })
         verify(response)
         response
+      rescue Net::OpenTimeout
+        case uri
+        when LOOKUP_URI then "Net::OpenTimeout in lookup with username: #{params[:username]}"
+        when STATS_URI then "Net::OpenTimeout in stats with account_id: #{params[:account_id]}"
+        end
       end
 
       def verify(response)
