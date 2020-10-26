@@ -17,15 +17,35 @@ All this is inside a kernel loop, so while the command is not interrupted, it wi
 ## Requirements
 
 1. Must have ruby installed.
-2. Must have `python3` installed to run Python script to take the screenshots.
+2. Must have python3 installed to run Python script to take the screenshots.
 
 ## Installation
 
 1. Clone this repository.
-2. Install Ruby dependencies: `bundle install`.
-3. Install Python dependencies: `pip3 install -r requirements.txt`.
-4. Build the gem: `gem build fortnite-opponents-stats`.
-5. Install the gem: `gem install fortnite-opponents-stats-#{GEM VERSION}.gem` (remember to change the gem version).
+
+2. Install Ruby dependencies:
+
+    ```bash
+    bundle install
+    ```
+
+3. Install Python dependencies:
+
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+
+4. Build the gem:
+
+    ```bash
+    gem build fortnite-opponents-stats
+    ```
+
+5. Install the gem (remember to change the gem version):
+
+    ```bash
+    gem install fortnite-opponents-stats-#{GEM VERSION}.gem
+    ```
 
 ## Usage
 
@@ -60,11 +80,12 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run 
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-### TODO
+### To Do
 
 1. Add logs.
-2. Move Python screenshot logic to Ruby (must be Windows compatible mainly).
-3. Add a friendly Ruby CLI toolkit (instead of using `ARGV`).
+2. Add more information about the match for each parsed username (kills, kills with different weapons, etc).
+3. Move Python screenshot logic to Ruby (must be Windows compatible mainly).
+4. Add a friendly Ruby CLI toolkit (instead of using `ARGV`).
 
 ## Contributing
 
