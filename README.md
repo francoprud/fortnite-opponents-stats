@@ -17,21 +17,13 @@ All this is inside a kernel loop, so while the command is not interrupted, it wi
 ## Requirements
 
 1. Must have ruby installed.
-2. Must have `python3` installed to run Python script to take the screenshots. Check that you have the following packages installed:
-
-    ```python
-    import sys
-    import mss
-    import mss.tools
-    import calendar
-    import time
-    ```
+2. Must have `python3` installed to run Python script to take the screenshots.
 
 ## Installation
 
 1. Clone this repository.
 2. Install Ruby dependencies: `bundle install`.
-3. Install Python dependencies: `TODO`.
+3. Install Python dependencies: `pip3 install -r requirements.txt`.
 4. Build the gem: `gem build fortnite-opponents-stats`.
 5. Install the gem: `gem install fortnite-opponents-stats-#{GEM VERSION}.gem` (remember to change the gem version).
 
