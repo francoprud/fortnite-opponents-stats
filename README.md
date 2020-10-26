@@ -12,7 +12,7 @@ It follows the following logic:
 
 All this is inside a kernel loop, so while the command is not interrupted, it will keep running.
 
-# PLACE GIF
+![](example.gif)
 
 ## Requirements
 
@@ -56,12 +56,12 @@ fortnite_opponents_stats YOUR_FORTNITE_API_KEY MONITOR_NUMBER PIXELS_FROM_TOP PI
 ```
 
 - **YOUR_FORTNITE_API_KEY**: [FortniteAPI.io](https://fortniteapi.io/) API. You can register for free for the basic usage.
-- **MONITOR_NUMBER**: Monitor number where you are going to display Fortnite gameplay. It's very convinient if you have two monitors so to run the game and on the other display the console with the results.
-- **PIXELS_FROM_TOP**: Pixels from top so to grab the top of the kill feed.
+- **MONITOR_NUMBER**: Monitor number where you are going to display Fortnite gameplay. It's very convinient if you have two monitors so to run the game and on the other display the console with the results. 1 is the default.
+- **PIXELS_FROM_TOP**: Pixels from top so to grab the top of the kill feed. 0 is the default.
 - **PIXELS_FROM_LEFT**: Pixels from left so to grab the left of the kill feed (this generally is 0).
 - **PIXELS_WIDTH**: Width in pixels to grab the kill feed.
 - **PIXELS_HEIGHT**: Height in pixels to grab the kill feed.
-- **OUTPUT_FOLDER**: Folder to store the screenshots (must be empty before starting the script).
+- **OUTPUT_FOLDER**: Folder to store the screenshots (must be empty before starting the script). `./screenshots` is the default.
 
 ## Specs
 ### Image Reader Specs
